@@ -49,20 +49,20 @@ All datasets were filtered to **1999–2005** and merged by country to align GDP
 
 ### 1) Average GDP per Capita by Region
 
-A line chart illustrating GDP trends across regions.\
-- **North America** leads in GDP per capita.\
+A line chart illustrating GDP trends across regions.
+- **North America** leads in GDP per capita.
 - All regions show consistent economic growth between 1999–2005.
 
 ### 2) Growth in Secondary Enrollment by Region
 
-Line chart showing percentage growth in enrollment.\
-- **Sub-Saharan Africa** exhibits the highest growth (\~50%) despite the lowest GDP.\
+Line chart showing percentage growth in enrollment.
+- **Sub-Saharan Africa** exhibits the highest growth (\~50%) despite the lowest GDP.
 - **Europe & Central Asia** shows slight decline; **North America** remains steady.
 
 ### 3) Enrollment by Income Level and Gender
 
-Bar + line chart comparing gender and income categories.\
-- Males generally have higher enrollment than females.\
+Bar + line chart comparing gender and income categories.
+- Males generally have higher enrollment than females.
 - After 2003, **low-income males surpass high-income males**, while **high-income females maintain higher rates** than low-income females.
 
 ## 💡 Key Insights
