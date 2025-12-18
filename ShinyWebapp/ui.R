@@ -121,7 +121,11 @@ fluidPage(
               selected = "Bar",
               
             ),
-          )
+          ),
+          tags$hr(),
+          tags$div(
+            tags$strong("Warning:"),
+            tags$p("Plots may take some time to populate"))
 
         ),
         mainPanel(
@@ -149,7 +153,11 @@ fluidPage(
             proportion of boys in education compared to girls. It can also be seen vice versa where high income countries have enrollment ratios close to one."),
           p("Furthermore, what is an even greater observation from the geospatial visualizations is that regions also share a trend. For example,
             Africa and the Middle East tend to have lower GDP per capita and also more unequal gender enrollment compared to other parts of the world
-            especially North America and Europe.")
+            especially North America and Europe."),
+          tags$hr(),
+          tags$div(
+            tags$strong("Warning:"),
+            tags$p("Plots may take some time to populate"))
         ),
         mainPanel(
           fluidRow(
@@ -181,7 +189,11 @@ fluidPage(
               "Demographic Data (With Region)" = "demog_region",
               "Mapping Data" = "map_data"
             )
-          )
+          ),
+          tags$hr(),
+          tags$div(
+            tags$strong("Warning:"),
+            tags$p("Datasets may take some time to populate"))
         ),
         mainPanel(
           dataTableOutput("chosenTable")
