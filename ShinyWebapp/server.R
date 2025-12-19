@@ -111,7 +111,10 @@ function(input, output){
         ggplot(average_gdp_region_year, aes(x = Year, y = Average_GDP, color = Region)) +
         geom_line() +
         geom_point() +
-        labs(title = "Average GDP Per Capita by Region Over Time", x = "Year", y = "Average GDP Per Capita (USD)") +
+        labs(title = "Average GDP Per Capita by Region Over Time",
+             x = "Year",
+             y = "Average GDP Per Capita (USD)",
+             caption = "Source: World Bank GDP Data") +
        scale_y_log10(
           labels = scales::comma_format(prefix = "$"),
           limits = c(5000, max(average_gdp_region_year$Average_GDP) * 1.2),
@@ -124,6 +127,7 @@ function(input, output){
         ) +
         scale_x_continuous(breaks = seq(1999, 2005, 1)) +
         scale_color_manual(values = custom_colors) +
+        theme_bw() + 
         theme(
           plot.title = element_text(size = 22),
            axis.text = element_text(size = 15),
@@ -147,9 +151,13 @@ function(input, output){
         ggplot(demog_growth, aes(x = Year, y = Growth, color = Region)) +
           geom_line() +
           geom_point() +
-          labs(title = "Growth in Secondary Education Enrollment by Region", x = "Year", y = "Enrollment Growth (%)") +
+          labs(title = "Growth in Secondary Education Enrollment by Region",
+               x = "Year",
+               y = "Enrollment Growth (%)",
+               caption = "Source: UN Data enrollment in secondary education") +
           scale_y_continuous(breaks = seq(-100, 100, 5)) +
           scale_x_continuous(breaks = seq(1999, 2005, 2)) +
+          theme_bw() +
           theme(
             plot.title = element_text(size = 22),
             axis.title = element_text(size = 15),
@@ -170,9 +178,13 @@ function(input, output){
         ggplot(demog_growth_gender, aes(x = Year, y = Growth, color = Subgroup)) +
           geom_line() +
           geom_point() +
-          labs(title = "Growth in Secondary Education Enrollment by Gender", x = "Year", y = "Enrollment Growth (%)") + 
+          labs(title = "Growth in Secondary Education Enrollment by Gender",
+               x = "Year",
+               y = "Enrollment Growth (%)",
+               caption = "Source: UN Data enrollment in secondary education") + 
           scale_y_continuous(breaks = seq(-100, 100, 5)) +
           scale_x_continuous(breaks = seq(1999, 2005, 2)) +
+          theme_bw() +
           theme(
             plot.title = element_text(size = 22),
             axis.title = element_text(size = 15),
@@ -367,6 +379,16 @@ function(input, output){
             showocean = TRUE,
             oceancolor = "lightblue",
             projection = list(type = "orthographic")
+          ),
+          annotations = list(
+            list(
+              x = 1, y = -0.05,
+              text = "Source: UN data enrollment in secondary education",
+              showarrow=FALSE,
+              xref='paper', yref='paper',
+              xanchor='right',
+              font=list(size=10)
+            )
           )
         )
     }
@@ -416,6 +438,16 @@ function(input, output){
             showocean = TRUE,
             oceancolor = "lightblue",
             projection = list(type = "equirectangular")
+          ),
+          annotations = list(
+            list(
+              x = 1, y = 0,
+              text = "Source: UN data enrollment in secondary education",
+              showarrow=FALSE,
+              xref='paper', yref='paper',
+              xanchor='right',
+              font=list(size=10)
+            )
           )
         )
     }
@@ -464,6 +496,16 @@ function(input, output){
             tickvals = log10(c(100, 1000, 10000, 100000)),  # Tick positions on the log scale
             ticktext = c("$100", "$1k", "$10k", "$100k"),    # Human-readable labels
             len = 0.8
+          ),
+          annotations = list(
+            list(
+              x = 1, y = -0.05,
+              text = "Source: World Bank GDP Data",
+              showarrow=FALSE,
+              xref='paper', yref='paper',
+              xanchor='right',
+              font=list(size=10)
+            )
           )
         )
     }
@@ -502,6 +544,16 @@ function(input, output){
             tickvals = log10(c(100, 1000, 10000, 100000)),  # Tick positions on the log scale
             ticktext = c("$100", "$1k", "$10k", "$100k"),    # Human-readable labels
             len = 0.8
+          ),
+          annotations = list(
+            list(
+              x = 1, y = 0,
+              text = "Source: World Bank GDP Data",
+              showarrow=FALSE,
+              xref='paper', yref='paper',
+              xanchor='right',
+              font=list(size=10)
+            )
           )
         )
     }

@@ -5,7 +5,7 @@ account: glithan
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 14557376
-bundleId: 11343401
+bundleId: 11347393
 url: https://glithan.shinyapps.io/ShinyWebapp/
 version: 1
 asMultiple: FALSE
