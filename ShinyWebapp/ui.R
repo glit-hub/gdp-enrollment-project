@@ -251,7 +251,7 @@ fluidPage(
           tags$hr(),
           tags$div(
             tags$strong("Warning:"),
-            tags$p("Plots may take some time to populate"))
+            tags$p("Plots may take some time to populate depending on the internet"))
 
         ),
         mainPanel(
@@ -271,7 +271,7 @@ fluidPage(
           tags$hr(),
           tags$div(
             tags$strong("Warning:"),
-            tags$p("Plots may take some time to populate")),
+            tags$p("Plots may take some time to populate depending on the internet")),
           tags$hr(),
           h3("Trends Overview"),
           p("This map visualizes the average male-to-female ratio of enrollment across countries and regions from 1999 to 2005."),
@@ -320,7 +320,7 @@ fluidPage(
           tags$hr(),
           tags$div(
             tags$strong("Warning:"),
-            tags$p("Datasets may take some time to populate"))
+            tags$p("Datasets may take some time to populate depending on the internet"))
         ),
         mainPanel(
           dataTableOutput("chosenTable")
