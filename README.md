@@ -1,21 +1,47 @@
+---
+editor_options: 
+  markdown: 
+    wrap: sentence
+---
+
 # Gender and Income Effects on Secondary Education Enrollment (1999–2005)
 
-## Glit Hanpanitkitkan
+**Author:** Glit Hanpanitkitkan\
+**Affiliation:** University of Washington — Statistics (Data Science)
 
-## 🚀 Live App & How to Run
+## Table of Contents
 
-**Live Shiny App:**  
+-   [Live App](#live-app)
+-   [Project Overview](#project-overview)
+-   [How to Run](#how-to-run)
+-   [Data Sources](#data-sources)
+-   [Visualizations](#visualizations)
+-   [Key Insights](#key-insights)
+-   [Tools & Techniques](#tools--techniques)
 
-👉 https://glithan.shinyapps.io/ShinyWebapp/
+## Live App {#live-app}
+
+**Live Shiny App:**
+
+<https://glithan.shinyapps.io/ShinyWebapp/>
+
+## Project Overview: {#project-overview}
+
+**Research Question:** How does a country’s income (GDP per capita in USD) affect male and female secondary-school enrollment, and how do these patterns differ across world regions from 1999 to 2005?
+
+**Motivation:**\
+Educational gender inequality remains a global issue, especially in lower-income regions.
+By integrating data on income, gender, and education, this project examines how economic development influences access to secondary education.
+
+## How to run: {#how-to-run}
 
 **Run Locally:**
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/glithan/STAT_451_Final_Project.git
-   
-2. Install required packages (if not already installed):
-```
+1.  Clone the repository: \`\`\`bash git clone <https://github.com/glithan/STAT_451_Final_Project.git>
+
+2.  Install required packages (if not already installed):
+
+```         
     install.packages(c(
     "shiny", "dplyr", "ggplot2", "plotly", "tidyr", "readr",
     "countrycode", "DT", "viridis", "RCurl", "tidyverse", "fastmap", "htmltools",
@@ -23,21 +49,12 @@
     ))
 ```
 
-3. Run the app:
-    Open app.R and click "Run App" in RStudio.
+3.  Run the app: Open app.R and click "Run App" in RStudio.
 
-
-## 📊 Project Overview:
-
-**Research Question:** How does a country’s income (GDP per capita in USD) affect male and female secondary-school enrollment, and how do these patterns differ across world regions from 1999 to 2005?
-
-**Motivation:**\
-Educational gender inequality remains a global issue, especially in lower-income regions. By integrating data on income, gender, and education, this project examines how economic development influences access to secondary education.
-
-## 🧠 Data Sources
+## Data Sources {#data-sources}
 
 | Dataset                          | Source                                                                                                                 | Key Features                                                |
-|----------------------|--------------------|-------------------------------|
+|----------------------|--------------------|------------------------------|
 | GDP per Capita                   | [World Bank](https://data.worldbank.org/indicator/NY.GDP.PCAP.CD)                                                      | Annual GDP per capita (USD) by country                      |
 | Secondary Enrollment (by Gender) | [UN Data GenderStats](https://data.un.org/Data.aspx?d=GenderStat&f=inID%3a64)                                          | Enrollment counts for males and females by year and country |
 | Population Data                  | [U.S. Census International Database](https://www.census.gov/data-tools/demo/idb/#/table)                               | Population and sex ratio by country and year                |
@@ -45,7 +62,7 @@ Educational gender inequality remains a global issue, especially in lower-income
 
 All datasets were filtered to **1999–2005** and merged by country to align GDP, enrollment, and demographic data.
 
-## 📈 Visualizations
+## Visualizations {#visualizations}
 
 ### 1) Average GDP per Capita by Region
 
@@ -65,12 +82,13 @@ Bar + line chart comparing gender and income categories.
 - Males generally have higher enrollment than females.
 - After 2003, **low-income males surpass high-income males**, while **high-income females maintain higher rates** than low-income females.
 
-## 💡 Key Insights
-- Higher GDP correlates with higher enrollment, but **not uniformly across genders**.  
-- Economic growth alone doesn’t ensure **educational gender parity**.  
-- Some low-income regions show **faster progress in enrollment growth**, narrowing the gap.
+## Key Insights {#key-insights}
 
-## 🧰 Tools & Techniques
-- **Languages:** R (Dplyr, ggplot2, plotly, tidyr, shiny)  
-- **Techniques:** Data cleaning, merging multi-source datasets, time-series visualization, and regional aggregation  
+-   Higher GDP correlates with higher enrollment, but **not uniformly across genders**.\
+-   Economic growth alone doesn’t ensure **educational gender parity**.\
+-   Some low-income regions show **faster progress in enrollment growth**, narrowing the gap.
 
+## Tools & Techniques {#tools--techniques}
+
+-   **Languages:** R (Dplyr, ggplot2, plotly, tidyr, shiny)\
+-   **Techniques:** Data cleaning, merging multi-source datasets, time-series visualization, and regional aggregation
